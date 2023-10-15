@@ -39,6 +39,8 @@ header {
   text-align: center;
 }
 
+
+
 .cards {
   display: flex;
   justify-content: center;
@@ -99,4 +101,9 @@ header {
 .btn-status:hover {
   background-color: #ffffffde;
   color: #242424;
+}
+
+.rotate{
+  transform: rotate3d(1, 1, 1, 360deg);
+  transition: transform 0.5s ease ;
 }

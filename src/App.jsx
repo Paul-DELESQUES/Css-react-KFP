@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import Header from "./components/Header";
 import CardKFP from "./components/CardKFP";
 import ButtonKFP from "./components/ButtonKFP";
@@ -26,19 +26,30 @@ const poKFP = [
 ];
 
 const App = () => {
+  const [theBest, setTheBest] = useState(0);
+  const [animationClass, setAnimationClass] = useState("");
 
-  const [theBest, setTheBest] = useState(0)
-    const handleClickTheBest = () => {
-        setTheBest(theBest + 1)
-    }
-    const handleClickTheBest2 = () => {
-        setTheBest(theBest - 1)
-    }
-   return (
+  const handleClickTheBest = () => {
+    setAnimationClass("rotate");
+    setTimeout(() => {
+      setTheBest((prev) => (prev === poKFP.length - 1 ? 0 : prev + 1));
+      setAnimationClass("");
+    }, 500);
+  };
+
+  const handleClickTheBest2 = () => {
+    setAnimationClass("rotate");
+    setTimeout(() => {
+      setTheBest((prev) => (prev === 0 ? poKFP.length - 1 : prev - 1));
+      setAnimationClass("");
+    }, 500);
+  };
+
+  return (
     <>
       <Header title="KUNG FU PANDA" />
       <div className="cards">
-        <div className="card-container">
+        <div className={`card-container ${animationClass}`}>
           <CardKFP theGoat={poKFP[theBest]} />
           <ButtonKFP
             theBest={theBest}
@@ -51,4 +62,5 @@ const App = () => {
     </>
   );
 };
-export default App
+
+export default App;
