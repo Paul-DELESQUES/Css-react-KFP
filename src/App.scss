@@ -1,3 +1,9 @@
+$primary-bgd-color: #242424;
+$secondary-bgd-color:#e27712;
+$primary-color: #ffffffde;
+$hover-bgd:#ffffffde;
+$hover-color:#242424;
+
 * {
   box-sizing: border-box;
 }
@@ -6,8 +12,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #242424;
-  color: rgba(255, 255, 255, 0.87);
+  background-color: $primary-bgd-color;
+  color: $primary-color;
 }
 
 h1 {
@@ -17,21 +23,27 @@ h1 {
 
 header {
   display: flex;
-  padding: .5rem;
+  padding: .8rem;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: brown;
-  font-size: 2rem;
+  background-color: $secondary-bgd-color;
+  font-size: 1.6rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .cards {
   display: flex;
-  margin-top: 5rem;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  height: 100vh; /* Ajustez la hauteur en fonction de vos besoins */
 }
 
 .container {
@@ -67,18 +79,25 @@ header {
   align-items: center;
 }
 
-.button{
+.btn-container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .btn-status {
   border: none;
   border-radius: 10px;
   height: 50px;
-  background-color: #242424;
-  color: rgba(255, 255, 255, 0.87);
+  width: 10vw;
+  background-color: $primary-bgd-color;
+  color: $primary-color;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.btn-status:hover {
+  background-color: #ffffffde;
+  color: #242424;
 }
 

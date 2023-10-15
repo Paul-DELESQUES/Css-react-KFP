@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import Header from "./components/Header";
 import CardKFP from "./components/CardKFP";
 import ButtonKFP from "./components/ButtonKFP";
-import "./App.css"
+import "./App.scss"
 
 const poKFP = [
   {
@@ -34,14 +34,22 @@ const App = () => {
     const handleClickTheBest2 = () => {
         setTheBest(theBest - 1)
     }
-  return (
-    <>
-      <Header title="KUNG FU PANDA" />
-      <div className="cards">
-        <CardKFP theGoat={poKFP[theBest]} />
-        < ButtonKFP theBest={theBest} poKFP={poKFP} handleClickTheBest={handleClickTheBest} handleClickTheBest2={handleClickTheBest2}/>
-      </div>
-    </>
-  )
-}
+    return (
+      <>
+        <Header title="KUNG FU PANDA" />
+        <div className="cards">
+          <div className="card-container">
+            <CardKFP theGoat={poKFP[theBest]} />
+            <ButtonKFP
+              theBest={theBest}
+              poKFP={poKFP}
+              handleClickTheBest={handleClickTheBest}
+              handleClickTheBest2={handleClickTheBest2}
+            />
+          </div>
+        </div>
+      </>
+    );
+  };
+
 export default App

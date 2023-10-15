@@ -1,8 +1,6 @@
-# React + Vite
+Methode choisi : "Préprocesseurs CSS" en utilisant du SASS (scss)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+J'ai choisi cette méthode car pour le moment étant pas très bon et à l'aise avec le css, celle-ci me permet d'ulitiser du css qu'on a appris en ajoutant seulement un package ainsi qu'un script et quelques varrialbles avec la synthaxe scss. 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+J'ai voulu pour cette quête créer un projet de A à Z en y ajoutant la méthode plutot que faire une seule carte. 
+Cela m'a permis de réviser et m'entrainer sur React.
