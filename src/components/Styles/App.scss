@@ -1,0 +1,103 @@
+$primary-bgd-color: #242424;
+$secondary-bgd-color:#e27712;
+$primary-color: #ffffffde;
+$hover-bgd:#ffffffde;
+$hover-color:#242424;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: $primary-bgd-color;
+  color: $primary-color;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  padding: 0;
+  justify-content: space-around;
+  align-items: center;
+  height: 10%;
+  width: 100%;
+  background-color: $secondary-bgd-color;
+  font-size: 1.6rem;
+}
+
+.title,
+.title2 {
+  cursor: pointer;
+}
+
+.title:hover,
+.title2:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-body {
+  padding: 0.2rem 0.4rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.culte {
+  display: flex;
+  justify-content: center;
+  margin: 0.2rem 0;
+}
+
+.card-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-status {
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 100px;
+  margin: .5rem;
+  background-color: $primary-bgd-color;
+  color: $primary-color;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+
+.btn-status:hover {
+  background-color: #ffffffde;
+  color: #242424;
+}
+
+.rotate{
+  transform: rotate3d(1, 1, 1, 360deg);
+  transition: transform 0.5s ease ;
+}
