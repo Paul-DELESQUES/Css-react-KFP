@@ -47,7 +47,7 @@ const App = () => {
 
   return (
     <>
-      <Header title="KUNG FU PANDA" />
+      <Header title="KUNG FU PANDA" title2="NINJA TURTLE"/>
       <div className="cards">
         <div className={`card-container ${animationClass}`}>
           <CardKFP theGoat={poKFP[theBest]} />

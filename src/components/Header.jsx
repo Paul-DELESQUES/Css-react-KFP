@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 
 const Header = (props) => {
-    const { title } = props;
+    const { title, title2 } = props;
     return (
         <header>
-            <h1 className="title">{title}</h1>
+            <h2 className="title">{title}</h2>
+            <h2 className="title2">{title2}</h2>
         </header>
     );
 }
