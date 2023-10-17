@@ -1,0 +1,21 @@
+.container-ninjaTurtles {
+    display: flex;
+    border-radius: 0.4rem;
+    width: 280px;
+    margin: 3rem auto;
+    flex-direction: column;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .card-team {
+    display: flex;
+    border-radius: 0.4rem;
+    width: 480px;
+    margin: 3rem auto;
+    flex-direction: column;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .nt-background {
+    background-color: rgb(21, 116, 21);
+  }

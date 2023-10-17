@@ -4,7 +4,9 @@ import CardKFP from "./components/CardKFP";
 import ButtonKFP from "./components/ButtonKFP";
 import poKFP from "./components/datas/dataKFP";
 import dataNinjaturtles from "./components/datas/dataNT";
-import "./App.scss"
+import "./components/Styles/App.scss"
+import "./components/Styles/KFP.scss"
+import "./components/Styles/NinjaTurtles.scss"
 
 
 
@@ -14,6 +16,7 @@ const App = () => {
   const [switchTheme, setSwitchTheme] = useState(poKFP)
   const [previousTheme, setPreviousTheme] = useState(poKFP)
 
+  // fonctions animations 
   const handleClickTheBest = () => {
     setAnimationClass("rotate");
     setTimeout(() => {
@@ -30,6 +33,7 @@ const App = () => {
     }, 500);
   };
 
+  // fontions changement de theme KFP ou NT
   const handleChangeTheme = (e) => {
     setPreviousTheme(switchTheme)
     setSwitchTheme(e)
@@ -41,12 +45,12 @@ const App = () => {
     <>
       <Header
         title="KUNG FU PANDA"
-        title2="NINJA TURTLE"
+        title2="NINJA TURTLES"
         changeTheme={() => handleChangeTheme(dataNinjaturtles)}
-        changePreviousTheme = {() => handleprevious(poKFP)}
+        changePreviousTheme={() => handleprevious(poKFP)}
       />
-      <div className="cards">
-        <div className={`card-container ${animationClass}`}>
+      <div className={`cards" ${switchTheme === poKFP ? 'KFP' : 'NinjaTurtles'}`}>
+        <div className={`card-container ${animationClass} ${switchTheme === poKFP ? 'container-KFP' : 'container-ninjaTurtles'} ${switchTheme[theBest].isLast ? "card-team" : ""}`}>
           <CardKFP theGoat={switchTheme[theBest]} />
           <ButtonKFP
             theBest={theBest}
